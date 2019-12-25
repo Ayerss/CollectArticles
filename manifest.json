@@ -1,0 +1,26 @@
+{
+  "name": "CollectArticles",
+  "version": "1.0.0",
+  "description": "下载小说到本地",
+  "icons": { "128": "favicon.png" },
+  "manifest_version": 2,
+  "optional_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_title": "下载小说到本地",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/FileSaver.min.js","js/contentScript.js"],
+      "run_at": "document_start",
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}

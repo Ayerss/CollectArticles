@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CollectArticles</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>* {box-sizing: border-box}main {padding: 40px;width: 400px;min-height: 400px}</style>
+</head>
+<body>
+<main>
+  <form>
+    <div class="form-group">
+      <label for="bookName">书名</label>
+      <input type="text" class="form-control form-control-sm" id="bookName">
+    </div>
+    <div class="form-group">
+      <label for="titleDom">标题DOM</label>
+      <input value="#content .title" type="text" class="form-control form-control-sm" id="titleDom" aria-describedby="titleHelp">
+      <small id="titleHelp" class="form-text text-muted">使用document.querySelector方法</small>
+    </div>
+    <div class="form-group">
+      <label for="conDom">内容DOM</label>
+      <input value="#content" type="text" class="form-control form-control-sm" id="conDom">
+    </div>
+    <div class="form-group">
+      <label for="nextDom">下一页DOM</label>
+      <input value=".thumb a:last-of-type" type="text" class="form-control form-control-sm" id="nextDom">
+    </div>
+    <div class="form-group">
+      <label for="num">循环次数</label>
+      <input type="text" class="form-control form-control-sm" id="num" aria-describedby="numHelp">
+      <small id="numHelp" class="form-text text-muted">单次循环获取次数</small>
+    </div>
+    <button id="get2next" type="button" class="btn btn-primary">获取</button>
+    <button id="clear" type="button" class="btn btn-secondary">下载</button>
+  </form>
+</main>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
