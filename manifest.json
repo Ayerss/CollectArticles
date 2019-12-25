@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "js": ["js/FileSaver.min.js","js/contentScript.js"],
+      "js": ["js/contentScript.js"],
       "run_at": "document_start",
       "matches": ["http://*/*", "https://*/*"]
     }
