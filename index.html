@@ -24,12 +24,10 @@
       <label for="titleDom" class="col-sm-3 col-form-label">标题DOM</label>
       <div class="col-sm-8">
         <input
-            value="#content .title"
             type="text"
             class="form-control form-control-sm"
             id="titleDom"
             aria-describedby="titleHelp">
-
         <small id="titleHelp" class="form-text text-muted">使用document.querySelector方法</small>
       </div>
       <div class="col-sm-1 text-center">
@@ -40,7 +38,7 @@
     <div class="form-group row">
       <label for="conDom" class="col-sm-3 col-form-label">内容DOM</label>
       <div class="col-sm-8">
-        <input value="#content" type="text" class="form-control form-control-sm" id="conDom">
+        <input type="text" class="form-control form-control-sm" id="conDom">
       </div>
       <div class="col-sm-1 text-center">
         <span aria-describedby="conDom" class="badge badge-info">Test</span>
@@ -50,7 +48,7 @@
     <div class="form-group row">
       <label for="nextDom" class="col-sm-3 col-form-label">下一页DOM</label>
       <div class="col-sm-8">
-        <input value=".thumb a:last-of-type" type="text" class="form-control form-control-sm" id="nextDom">
+        <input type="text" class="form-control form-control-sm" id="nextDom" placeholder=":last-of-type">
       </div>
       <div class="col-sm-1 text-center">
         <span aria-describedby="nextDom" class="badge badge-info">Test</span>
@@ -58,15 +56,17 @@
     </div>
 
     <div class="form-group row">
-      <label for="num" class="col-sm-3 col-form-label">循环次数123</label>
+      <label for="num" class="col-sm-3 col-form-label">循环次数</label>
       <div class="col-sm-8">
         <input type="text" class="form-control form-control-sm" id="num" aria-describedby="numHelp">
         <small id="numHelp" class="form-text text-muted">单次循环获取次数</small>
       </div>
     </div>
 
-    <button id="get2next" type="button" class="btn btn-primary">获取</button>
-    <button id="clear" type="button" class="btn btn-secondary">下载</button>
+    <button id="get2next" type="button" class="btn btn-primary btn-sm">获取</button>
+    <button id="clear" type="button" class="btn btn-secondary btn-sm">下载</button>
+    <button id="saveConf" type="button" class="btn btn-success btn-sm">缓存配置</button>
+    <button id="clearConf" type="button" class="btn btn-danger btn-sm">清空配置</button>
   </form>
 </main>
 
