@@ -29,6 +29,7 @@ function applyDom(dom) {
     padding: 20px;
     top: 50%;
     left: 50%;
+    z-index: 999999;
     width: 400px;
     height: 400px;
     background: #fff;
